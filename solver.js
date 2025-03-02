@@ -28,6 +28,13 @@ phraseInput.addEventListener('keyup', async function (event) {
     // TODO output matches in a nicer way.
     console.log(matchingCities);
 
+    // Output:
+    // Cities containing no letters from "<phrase>"
+
+    for (const matchingCity of matchingCities) {
+      console.log(`<li>${matchingCity}</li>`);
+    }
+
     // TODO output the phrase too
 
     // TODO clear the input
