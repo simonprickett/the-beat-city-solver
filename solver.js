@@ -25,19 +25,17 @@ phraseInput.addEventListener('keyup', async function (event) {
       return commonChars.size === 0;
     });
   
-    // TODO output matches in a nicer way.
-    console.log(matchingCities);
-
-    // Output:
-    // Cities containing no letters from "<phrase>"
+    let resultsHTML = '';
 
     for (const matchingCity of matchingCities) {
-      console.log(`<li>${matchingCity}</li>`);
+      resultsHTML = `${resultsHTML}<li>${matchingCity}</li>`;
     }
 
-    // TODO output the phrase too
+    document.getElementById('resultsList').innerHTML = resultsHTML;
+    document.getElementById('resultsArea').classList.remove('is-hidden');
 
-    // TODO clear the input
+    // TODO clear output when phrase input is deleted.
+    // TODO explicitly state there are no matches when none are found.
   }
 });
 
